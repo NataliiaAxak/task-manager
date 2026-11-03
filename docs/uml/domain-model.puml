@@ -1,0 +1,38 @@
+@startuml
+
+class User {
+  +id: UUID
+  +name: String
+}
+
+class Task {
+  +id: UUID
+  +title: String
+  +description: String
+  +status: TaskStatus
+  +priority: Priority
+}
+
+class Tag {
+  +id: UUID
+  +name: String
+}
+
+enum TaskStatus {
+  TODO
+  IN_PROGRESS
+  DONE
+}
+
+enum Priority {
+  LOW
+  MEDIUM
+  HIGH
+}
+
+User "1" -- "0..*" Task : owns >
+Task "0..*" -- "0..*" Tag
+Task --> TaskStatus
+Task --> Priority
+
+@enduml
