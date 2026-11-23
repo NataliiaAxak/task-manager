@@ -1,0 +1,23 @@
+@startuml
+
+actor User
+participant "TaskController" as C
+participant "TaskService" as S
+participant "TaskRepository" as R
+
+User -> C: createTask(title, priority)
+C -> S: createTask(command)
+
+S -> S: validate title
+
+alt valid data
+    S -> R: save(task)
+    R --> S: saved task
+    S --> C: TaskDto
+    C --> User: 201 Created
+else invalid title
+    S --> C: ValidationError
+    C --> User: 400 Bad Request
+end
+
+@enduml

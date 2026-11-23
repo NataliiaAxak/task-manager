@@ -1,0 +1,20 @@
+@startuml
+
+skinparam componentStyle rectangle
+
+component "Presentation" as Presentation
+component "Application" as Application
+component "Domain" as Domain
+component "Infrastructure" as Infrastructure
+database "SQLite" as DB
+
+interface "ITaskRepository" as IRepo
+
+Presentation --> Application
+Application --> Domain
+Application --> IRepo
+
+Infrastructure ..|> IRepo
+Infrastructure --> DB
+
+@enduml

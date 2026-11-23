@@ -1,0 +1,21 @@
+@startuml
+
+left to right direction
+
+actor User
+
+rectangle "Task Manager" {
+  usecase "Create Task" as UC1
+  usecase "Edit Task" as UC2
+  usecase "Change Status" as UC3
+  usecase "Search Tasks" as UC4
+  usecase "View Tasks" as UC5
+}
+
+User -- UC1
+User -- UC2
+User -- UC3
+User -- UC4
+User -- UC5
+
+@enduml
