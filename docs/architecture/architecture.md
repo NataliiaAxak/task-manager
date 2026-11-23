@@ -79,4 +79,8 @@ Infrastructure реалізує persistence contracts.
 | NFR-03 Performance     | direct local persistence via SQLite     |
 | FR-01 Create Task      | Presentation → Application → Repository |
 
+## 12 Decisions
+
+- ADR-001 – Modular Monolith + Layered Architecture;
+- ADR-002 – Repository / Port for Persistence.
 

@@ -8,3 +8,4 @@
 | FR-05 | UC Search Tasks | Application, Infrastructure | ADR-001 | ITaskService | search test |
 | NFR-01 | Component Diagram | Application, Domain, Infrastructure | ADR-001, ADR-002 | ITaskRepository | unit tests without SQLite |
 | NFR-02 | Architecture / Configuration | Infrastructure | ADR-001 | – | repository audit |
+Get-ChildItem docs -Recurse
